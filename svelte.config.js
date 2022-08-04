@@ -1,5 +1,7 @@
 /** @type {import('@sveltejs/kit').Config} */
 
+const dev = process.env.NODE_ENV === 'development';
+
 import adapter from '@sveltejs/adapter-static';
 
 const config = {
@@ -9,8 +11,9 @@ const config = {
 			default: true,
 		},
 		paths: {
-			base: '/anymapper-template-temp/build',
+			base: dev ? '' : '/anymapper-template-temp/build',
 		},
+		appDir: 'app',
 	}
 };
 
