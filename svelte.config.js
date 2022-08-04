@@ -8,6 +8,9 @@ const config = {
 		prerender: {
 			default: true,
 		},
+		paths: {
+			base: '/anymapper-template-temp/build',
+		},
 	}
 };
 
