@@ -4,12 +4,17 @@
 
 // Svelte Colors!
 @use '@material/theme/index' as theme with (
-  $primary: #ff3e00,
+  $primary: brown,
   $secondary: #676778,
   $surface: #fff,
   $background: #fff,
   $error: color-palette.$red-900
 );
+
+// apply the theme to anymapper CCS vars 
+:root {
+  --anymapper-primary: #{theme.$primary};
+}
 
 html,
 body {

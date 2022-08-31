@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { View, Layer, InfoBox, OmniBox, FloorLayersCtrl, ResultsBox, InlineSVG } from 'anymapper'
+	import Button from '@smui/button'
 </script>
 
 <style>
@@ -55,6 +56,9 @@
 		--infobox-header-height: 86px;
 		--omnibox-margin: 10px;
 	}
+	footer {
+		background-color: var(--mdc-theme-primary);
+	}
 </style>
 
 <div class="wrapper">
@@ -82,6 +86,10 @@
 <InfoBox>
 	Hello
 </InfoBox>
+
+<div style="position: absolute; left: 10px; bottom: 10px;">
+	<Button>blah</Button>
+</div>
 
 <footer>Powered by <a href="https://github.com/webvis/anymapper">anymapper</a>, by <a href="//hct.iit.cnr.it/">HCT Lab</a> @<a href="//www.iit.cnr.it/">CNR-IIT</a></footer>
 
