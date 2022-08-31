@@ -3,7 +3,7 @@
 </script>
 
 <style>
-	/* FIXME? global deafults? */
+	/* FIXME? global defaults? */
 	:global(html), :global(body) {
 		margin: 0;
 		padding: 0;
