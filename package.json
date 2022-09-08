@@ -25,7 +25,7 @@
     "vite-plugin-pwa": "^0.12.3"
   },
   "dependencies": {
-    "anymapper": "^0.19.0",
+    "anymapper": "^0.21.5",
     "smui-theme": "^6.1.3"
   }
 }
