@@ -7,7 +7,7 @@
   $primary: #bf4400,
   $secondary: #676778,
   $surface: #fff,
-  $background: #fff,
+  $background: #e3f4d7,
   $error: color-palette.$red-900
 );
 
@@ -18,8 +18,9 @@ body {
 
   // apply the theme to anymapper styles
   --anymapper-primary-bg-color: #{theme.$primary};
-  --anymapper-normal-bg-color: #{theme.$surface};
-  --anymapper-normal-fg-color: #{theme.$on-surface};
+  --anymapper-surface-bg-color: #{theme.$surface};
+  --anymapper-surface-fg-color: #{theme.$on-surface};
+  --anymapper-background-color: #{theme.$background};
 }
 
 a {
