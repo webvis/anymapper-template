@@ -9,15 +9,15 @@ export default defineConfig({
     workbox: {
       globPatterns: ['./**/*.{js,css,html,ico,png,svg,json}']
     },
-    includeAssets: ['vite.svg'],
+    includeAssets: ['icon.svg'],
       manifest: {
-        name: 'My Awesome App',
-        short_name: 'MyApp',
-        description: 'My Awesome App description',
-        theme_color: '#ffffff',
+        name: 'Anymapper Application',
+        short_name: 'AnymapperApp',
+        description: 'Template for anymapper application',
+        theme_color: '#bf4400',
         icons: [
           {
-            src: 'vite.svg',
+            src: 'icon.svg',
             sizes: 'any',
             type: 'image/svg+xml'
           },

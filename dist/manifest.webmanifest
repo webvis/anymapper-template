@@ -1,1 +1,1 @@
-{"name":"My Awesome App","short_name":"MyApp","start_url":"./","display":"standalone","background_color":"#ffffff","lang":"en","scope":"./","description":"My Awesome App description","theme_color":"#ffffff","icons":[{"src":"vite.svg","sizes":"any","type":"image/svg+xml"}]}
+{"name":"Anymapper Application","short_name":"AnymapperApp","start_url":"./","display":"standalone","background_color":"#ffffff","lang":"en","scope":"./","description":"Template for anymapper application","theme_color":"#bf4400","icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml"}]}
