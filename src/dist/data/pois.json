@@ -1,0 +1,17 @@
+[
+    {
+        "id": "kitchen",
+        "title": "Kitchen",
+        "subtitle": "Room",
+        "icon": "restaurant",
+        "shape": "circle",
+        "position": {
+            "x": 655,
+            "y": 585,
+            "layers": [
+                "T"
+            ],
+            "lodrange": [0.6, "Infinity"]
+        }
+    }
+]
