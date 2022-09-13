@@ -2261,10 +2261,10 @@ ansi-styles@^4.0.0, ansi-styles@^4.1.0:
   dependencies:
     color-convert "^2.0.1"
 
-anymapper@^0.24.2:
-  version "0.24.2"
-  resolved "https://registry.yarnpkg.com/anymapper/-/anymapper-0.24.2.tgz#d77b5d5434e5c369b15d9b147e6d34b71c1d44db"
-  integrity sha512-ocxUwt4n6si6lY3jy6zdEJGGmhIgzvXt/dtvscF6vxWRiZWvo5yNlXYSdJuIXTzcg/ooo2BVGivOyFfuffsseA==
+anymapper@^0.25.1:
+  version "0.25.1"
+  resolved "https://registry.yarnpkg.com/anymapper/-/anymapper-0.25.1.tgz#2b7255099594a9f5e439066e25c67cee35987f04"
+  integrity sha512-lV48iTmK3zZ86HjrQxd42cNM89Ko8o/pMc043KQYInc6Oa1WPgvjrWVSlXx3bsCgcbloQr3MY/HUQg6rF+IWCA==
   dependencies:
     "@observablehq/runtime" "^4.8.2"
     d3 "^7.6.1"

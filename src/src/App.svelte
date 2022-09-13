@@ -37,11 +37,11 @@
 		</Layer>
 	</View>
 
+	<FloorLayersCtrl/>
+
 	<InfoBox>
 		<InfoBoxHeader title={$selection.title} subtitle={$selection.subtitle}/>
 	</InfoBox>
-
-	<FloorLayersCtrl/>
 
 	<footer>Powered by <a href="https://github.com/webvis/anymapper">anymapper</a>, by <a href="//hct.iit.cnr.it/">HCT Lab</a> @<a href="//www.iit.cnr.it/">CNR-IIT</a></footer>
 </Anymap>
