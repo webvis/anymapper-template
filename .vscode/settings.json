@@ -1,0 +1,6 @@
+{
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#bf4400"
+    },
+    "terminal.integrated.cwd": "src"
+}
