@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { Anymap, View, Layer, FloorLayersCtrl, InlineSVG, InfoBox, InfoBoxHeader } from 'anymapper'
 	import { selected_id, selection } from 'anymapper'
+	import { Content } from '@smui/card'
+
 	import { pois } from './stores.js'
 
 	import POI from './POI.svelte'
@@ -16,6 +18,9 @@
 </script>
 
 <style>
+	p {
+		margin-block-start: 0;
+	}
 </style>
 
 <Anymap>
@@ -37,11 +42,15 @@
 		</Layer>
 	</View>
 
-	<FloorLayersCtrl/>
-
 	<InfoBox>
 		<InfoBoxHeader title={$selection.title} subtitle={$selection.subtitle}/>
+		<Content>
+			<p>This is the room where the food is cooked.</p>
+			<p>The house is full of other rooms.</p>
+		</Content>
 	</InfoBox>
+
+	<FloorLayersCtrl/>
 
 	<footer>Powered by <a href="https://github.com/webvis/anymapper">anymapper</a>, by <a href="//hct.iit.cnr.it/">HCT Lab</a> @<a href="//www.iit.cnr.it/">CNR-IIT</a></footer>
 </Anymap>
