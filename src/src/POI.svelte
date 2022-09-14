@@ -21,6 +21,7 @@
         icon_spacing={data.icon_spacing}
         text={data.text}
         shape={data.shape}
+        bg_color="steelblue"
         shadow
     />
 </g>

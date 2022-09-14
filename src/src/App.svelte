@@ -6,6 +6,7 @@
 	import { pois } from './stores.js'
 
 	import POI from './POI.svelte'
+	import Placemark from './Placemark.svelte'
 
 	function updateSelection() {
 		if($pois.has($selected_id))
@@ -21,11 +22,14 @@
 	p {
 		margin-block-start: 0;
 	}
+	p:last-child {
+		margin-block-end: 0;
+	}
 </style>
 
 <Anymap>
 	<View viewBox="0 0 800 800">
-		<Layer name="T" type="floor">
+		<Layer name="0" type="floor">
 			<InlineSVG path='data/floor0.svg'/>
 		</Layer>
 		<Layer name="1" type="floor">
@@ -40,13 +44,14 @@
 				<POI data={poi}/>
 			{/each}
 		</Layer>
+
+		<Placemark/>
 	</View>
 
 	<InfoBox>
 		<InfoBoxHeader title={$selection.title} subtitle={$selection.subtitle}/>
 		<Content>
-			<p>This is the room where the food is cooked.</p>
-			<p>The house is full of other rooms.</p>
+			<p>{@html $selection.content}</p>
 		</Content>
 	</InfoBox>
 
