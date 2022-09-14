@@ -19,10 +19,10 @@
 </script>
 
 <style>
-	p {
+	:global(p) {
 		margin-block-start: 0;
 	}
-	p:last-child {
+	:global(p:last-child) {
 		margin-block-end: 0;
 	}
 </style>
@@ -51,7 +51,7 @@
 	<InfoBox>
 		<InfoBoxHeader title={$selection.title} subtitle={$selection.subtitle}/>
 		<Content>
-			<p>{@html $selection.content}</p>
+			{@html $selection.content}
 		</Content>
 	</InfoBox>
 
