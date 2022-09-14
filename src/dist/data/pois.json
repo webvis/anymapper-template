@@ -4,7 +4,6 @@
         "title": "Dining Hall",
         "subtitle": "Room",
         "icon": "restaurant",
-        "shape": "circle",
         "position": {
             "x": 300,
             "y": 210,
@@ -20,7 +19,6 @@
         "title": "Kitchen",
         "subtitle": "Room",
         "icon": "kitchen",
-        "shape": "circle",
         "position": {
             "x": 655,
             "y": 585,
@@ -36,7 +34,6 @@
         "title": "Library",
         "subtitle": "Room",
         "icon": "local_library",
-        "shape": "circle",
         "position": {
             "x": 375,
             "y": 305,
