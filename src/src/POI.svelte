@@ -17,6 +17,7 @@
     <Marker
         icon={data.icon}
         bg_color="steelblue"
+        scale="1.25"
         shadow
     />
 </g>
