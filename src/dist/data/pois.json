@@ -18,7 +18,7 @@
         "id": "kitchen",
         "title": "Kitchen",
         "subtitle": "Room",
-        "icon": "kitchen",
+        "icon": "soup_kitchen",
         "position": {
             "x": 655,
             "y": 585,
@@ -33,7 +33,7 @@
         "id": "library",
         "title": "Library",
         "subtitle": "Room",
-        "icon": "local_library",
+        "icon": "auto_stories",
         "position": {
             "x": 375,
             "y": 305,

@@ -1,12 +1,17 @@
 <script lang="ts">
-	import { Anymap, View, Layer, FloorLayersCtrl, InlineSVG, InfoBox, InfoBoxHeader } from 'anymapper'
-	import { selected_id, selection } from 'anymapper'
+	import { Anymap, View, Layer, FloorLayersCtrl, InlineSVG, InfoBox, InfoBoxHeader, OmniBox, ResultsBox } from 'anymapper'
+	import { selected_id, selection, results } from 'anymapper'
+
 	import { Content } from '@smui/card'
 
-	import { pois } from './stores.js'
+	import { pois, search } from './stores.js'
 
 	import POI from './POI.svelte'
 	import Placemark from './Placemark.svelte'
+	import Results from './Results.svelte'
+
+	let omnibox
+	let results_box
 
 	function updateSelection() {
 		if($pois.has($selected_id))
@@ -16,6 +21,10 @@
 	}
 
 	selected_id.subscribe(updateSelection)
+
+	function handleSearch(e) {
+		$results = search(e.detail.query)
+	}
 </script>
 
 <style>
@@ -47,6 +56,12 @@
 
 		<Placemark/>
 	</View>
+
+	<OmniBox on:search={handleSearch} bind:this={omnibox} on:cursorexit={ () => results_box.focus() }>
+		<ResultsBox bind:this={results_box} on:cursorexit={ () => omnibox.focus() }>
+			<Results/>
+		</ResultsBox>
+	</OmniBox>
 
 	<InfoBox>
 		<InfoBoxHeader title={$selection.title} subtitle={$selection.subtitle}/>

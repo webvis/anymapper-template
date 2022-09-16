@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "anymapper": "^0.28.0",
+    "fuse.js": "^6.6.2",
     "smui-theme": "^6.1.3"
   }
 }
