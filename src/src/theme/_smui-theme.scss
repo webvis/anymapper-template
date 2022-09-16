@@ -2,7 +2,6 @@
 
 @use '@material/theme/color-palette';
 
-// Svelte Colors!
 @use '@material/theme/index' as theme with (
   $primary: #bf4400,
   $secondary: #676778,
@@ -25,4 +24,16 @@ body {
 
 a {
   color: theme.$primary;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+	'FILL' 0,
+	'wght' 600,
+	'GRAD' 0,
+	'opsz' 48
+}
+
+footer {
+  background-color: rgba(255,255,255,0.6)
 }

@@ -1,8 +1,7 @@
 html, body {
-	/* default style/theme */ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
-/* app style */
 a {
 	text-decoration: none;
 }
@@ -11,17 +10,6 @@ a:hover {
 	text-decoration: underline;
 }
 
-/* app */
-footer {
-	position: fixed;
-	right: 0;
-	bottom: 0;
-	font-size: 10px;
-	background: rgba(255,255,255,0.6);
-	padding: 2px;
-}
-
-/* theme? anymapper default? */
 hr {
     border: 0;
     border-top: 1px solid rgba(0,0,0,0.12);
@@ -29,11 +17,9 @@ hr {
     width: 100%;
 }
 
-/* THEME */
-.material-symbols-outlined {
-  font-variation-settings:
-	'FILL' 0,
-	'wght' 600,
-	'GRAD' 0,
-	'opsz' 48
+p {
+	margin-block-start: 0;
+}
+p:last-child {
+	margin-block-end: 0;
 }

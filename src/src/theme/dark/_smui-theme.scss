@@ -2,24 +2,38 @@
 
 @use '@material/theme/color-palette';
 
-// Svelte Colors! (Dark Theme)
 @use '@material/theme/index' as theme with (
-  $primary: #ff3e00,
+  $primary: #bf4400,
   $secondary: color.scale(#676778, $whiteness: -10%),
   $surface: color.adjust(color-palette.$grey-900, $blue: +4),
-  $background: #000,
+  $background: black,
   $error: color-palette.$red-700
 );
 
 html,
 body {
-  background-color: #000;
+  background-color: theme.$surface;
   color: theme.$on-surface;
+
+  // apply the theme to anymapper styles
+  --anymapper-primary-bg-color: #{theme.$primary};
+  --anymapper-surface-bg-color: #{theme.$surface};
+  --anymapper-surface-fg-color: #{theme.$on-surface};
+  --anymapper-background-color: #e3f4d7; // this follows the background of the map
 }
 
 a {
-  color: #40b3ff;
+  color: theme.$primary;
 }
-a:visited {
-  color: color.scale(#40b3ff, $lightness: -35%);
+
+.material-symbols-outlined {
+  font-variation-settings:
+	'FILL' 0,
+	'wght' 600,
+	'GRAD' -25, /* reduced glare */
+	'opsz' 48
+}
+
+footer {
+  background: rgba(0,0,0,0.8)
 }

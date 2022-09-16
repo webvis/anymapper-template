@@ -28,11 +28,12 @@
 </script>
 
 <style>
-	:global(p) {
-		margin-block-start: 0;
-	}
-	:global(p:last-child) {
-		margin-block-end: 0;
+	footer {
+		position: fixed;
+		right: 0;
+		bottom: 0;
+		font-size: 10px;
+		padding: 2px;
 	}
 </style>
 
