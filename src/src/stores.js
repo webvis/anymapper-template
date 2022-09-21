@@ -1,3 +1,9 @@
+// example store
+// -------------
+// a simple collection of points of interest (poi) read from a JSON file
+// the collection is exposed as a Svelte store, and implemented with a JS Map (to support id-based lookup)
+// the collection is also indexed with fuse.js in order to support full-text searching
+
 import { readable, derived, get } from 'svelte/store'
 import Fuse from 'fuse.js'
 

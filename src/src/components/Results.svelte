@@ -1,3 +1,6 @@
+<!--
+    this component is used to display a list of search results
+-->
 <script>
     import { select, results } from 'anymapper'
 	import { Item, Text, Graphic } from '@smui/list'
@@ -9,7 +12,7 @@
     }
     .secondary {
         margin-left: 4px;
-        color: var(--anymapper-surface-fg-color-light);
+        opacity: 0.6;
     }
 </style>
 
