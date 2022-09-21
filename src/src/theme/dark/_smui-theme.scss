@@ -1,3 +1,8 @@
+// DARK theme
+// ----------
+// modify this file to customize the application's appearance when a dark theme is in use
+// apply changes by running `yarn prepare`
+
 @use 'sass:color';
 
 @use '@material/theme/color-palette';
@@ -30,7 +35,7 @@ a {
   font-variation-settings:
 	'FILL' 0,
 	'wght' 600,
-	'GRAD' -25, /* reduced glare */
+	'GRAD' -25, // reduced glare
 	'opsz' 48
 }
 
