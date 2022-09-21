@@ -11,7 +11,7 @@
 	import { Content } from '@smui/card'
 
 	// store example
-	import { pois, search } from './stores.js'
+	import { pois, search } from './stores.ts'
 
 	// component examples
 	import POI from './components/POI.svelte'
@@ -62,7 +62,7 @@
 		<!-- this layer displays the content of the $pois store using POI components -->
 		<Layer name="pois">
 			{#each Array.from($pois.values()) as poi}
-				<POI data={poi}/>
+				<POI entity={poi}/>
 			{/each}
 		</Layer>
 

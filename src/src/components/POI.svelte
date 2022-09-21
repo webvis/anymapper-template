@@ -1,16 +1,19 @@
 <!--
     this component is used to display a marker positioned on the
-    given point of interest (as the data prop)
+    given entity
 -->
-<script>
-    import { zoom, current_layer, is_position_in_layer, is_position_in_lod } from 'anymapper'
+<script lang="ts">
+    import { zoom, current_layer, get_entity_position_in_layer, is_point_in_zoom_range } from 'anymapper'
     import { select } from 'anymapper'
     import { Marker } from 'anymapper'
+    import type { Entity, Point } from 'anymapper'
 
-    export let data
+    export let entity: Entity
 
-    // the POI is considered visible if it's on the current layer and the level of detail is adequate
-    $: visible = is_position_in_layer(data.position, $current_layer) && is_position_in_lod(data.position, $zoom)
+    let position: Point
+    $: position = get_entity_position_in_layer(entity, $current_layer)
+    let visible: boolean
+    $: visible = position !== null && is_point_in_zoom_range(position, $zoom)
 </script>
 
 <style>
@@ -20,10 +23,10 @@
 </style>
 
 {#if visible}
-<g class="selectable" transform="translate({data.position.x},{data.position.y}) scale({1/$zoom})"
-    on:click={() => select(data.id)}>
+<g class="selectable" transform="translate({position.x},{position.y}) scale({1/$zoom})"
+    on:click={() => select(entity.id)}>
     <Marker
-        icon={data.icon}
+        icon={entity.icon}
         bg_color="steelblue"
         scale="1.25"
         shadow
