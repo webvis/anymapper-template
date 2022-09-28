@@ -28,7 +28,7 @@
     <Marker
         icon={entity.icon}
         bg_color="steelblue"
-        scale="1.25"
+        scale={1.25}
         shadow
     />
 </g>

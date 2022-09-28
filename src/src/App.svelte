@@ -4,19 +4,25 @@
 	modify this file to create your application
 -->
 <script lang="ts">
+	import type Fuse from 'fuse.js'
+	
+	import type { Entity } from 'anymapper'
 	import { Anymap, View, Layer, FloorLayersCtrl, InlineSVG, InfoBox, InfoBoxHeader, OmniBox, ResultsBox } from 'anymapper'
-	import { selected_id, selection, results } from 'anymapper'
+	import { selected_id, selection } from 'anymapper'
 
 	// this template makes use of Svelte Material UI (same one that's used by anymapper)
 	import { Content } from '@smui/card'
 
+
 	// store example
-	import { pois, search } from './stores.ts'
+	import { pois, search } from './stores'
 
 	// component examples
 	import POI from './components/POI.svelte'
 	import Placemark from './components/Placemark.svelte'
 	import Results from './components/Results.svelte'
+
+	let results: Array<Fuse.FuseResult<Entity>> = []
 
 	let omnibox
 	let results_box
@@ -32,8 +38,17 @@
 
 	// what to do whenever the user issues a search
 	function handleSearch(e) {
-		$results = search(e.detail.query)
+		results = search(e.detail.query)
 	}
+
+	// what to do when an entity is selected
+	selection.subscribe(d => {
+		// if there's a valid selection...
+		if(d) {
+			// ...clear search results
+			results = []
+		}
+	})
 </script>
 
 <style>
@@ -70,9 +85,9 @@
 		<Placemark/>
 	</View>
 
-	<OmniBox on:search={handleSearch} bind:this={omnibox} on:cursorexit={ () => results_box.focus() }>
+	<OmniBox {results} on:search={handleSearch} bind:this={omnibox} on:cursorexit={ () => results_box.focus() }>
 		<ResultsBox bind:this={results_box} on:cursorexit={ () => omnibox.focus() }>
-			<Results/> <!-- search results -->
+			<Results {results}/> <!-- search results -->
 		</ResultsBox>
 	</OmniBox>
 
