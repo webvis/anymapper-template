@@ -6,12 +6,14 @@
 
 import { readable, derived, get } from 'svelte/store'
 import Fuse from 'fuse.js'
+import type { Entity } from 'anymapper'
 
 export const pois = readable(new Map(), function start(set) {
     fetch('data/pois.json')
         .then(async function (response) {
             let data = await response.json()
-            set( new Map(data.map(d => [d.id, {...d, position: {...d.position, layers: new Set(d.position.layers)}, type: 'poi'}] )) )
+            let entities: Array<Entity> = data.map(d => ({...d, position: {...d.position, layers: new Set(d.position.layers)}, type: 'poi'}))
+            set( new Map(entities.map(d => [d.id, d] )) )
         })
 })
 
@@ -31,5 +33,6 @@ export const pois_index = derived(pois,
 )
 
 export function search(query) {
-    return get(pois_index).search(query)
+    let result: Array<Fuse.FuseResult<Entity>> = get(pois_index).search(query)
+    return result
 }
