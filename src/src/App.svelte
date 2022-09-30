@@ -27,28 +27,22 @@
 	let omnibox
 	let results_box
 
-	// what to do whenever there's a change of selected ID
-	function updateSelection() {
-		if($pois.has($selected_id))
-			$selection = $pois.get($selected_id)
-		else
-			$selection = null
+	// what to do whenever there's a change of selected ID or pois
+	$: {
+		$selection = $pois.has($selected_id) ? $pois.get($selected_id) : null
 	}
-	selected_id.subscribe(updateSelection)
 
 	// what to do whenever the user issues a search
 	function handleSearch(e) {
 		results = search(e.detail.query)
 	}
 
-	// what to do when an entity is selected
-	selection.subscribe(d => {
-		// if there's a valid selection...
-		if(d) {
-			// ...clear search results
-			results = []
-		}
-	})
+	// what to do whenever an entity is selected
+	// if there's a valid selection...
+	$: if($selection) {
+		// ...clear search results
+		results = []
+	}
 </script>
 
 <style>
