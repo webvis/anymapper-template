@@ -4,14 +4,14 @@
 // the collection is exposed as a JS Map (to support id-based lookup)
 // the collection is also indexed with fuse.js in order to support full-text searching
 
-import type { Entity } from 'anymapper'
+import { Entity, Point } from 'anymapper'
 import Fuse from 'fuse.js'
 
 // read the list of pois from JSON, and return them as a Map of Entities
 export async function fetch_pois(): Promise<Map<string, Entity>> {
     let response = await fetch('data/pois.json')
     let data = await response.json()
-    let entities: Array<Entity> = data.map(d => ({...d, position: {...d.position, layers: new Set(d.position.layers)}})) // TBD: is Set necessary? if so, move it to a Point constructor
+    let entities: Array<Entity> = data.map(d => new Entity(d))
     return new Map(entities.map(d => [d.id, d] ))
 }
 

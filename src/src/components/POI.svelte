@@ -3,17 +3,17 @@
     given entity
 -->
 <script lang="ts">
-    import { zoom, current_layer, get_entity_position_in_layer, is_point_in_zoom_range } from 'anymapper'
+    import { zoom, current_layer } from 'anymapper'
     import { select } from 'anymapper'
     import { Marker } from 'anymapper'
-    import type { Entity, Point } from 'anymapper'
+    import { Entity, Point } from 'anymapper'
 
     export let entity: Entity
 
     let position: Point
-    $: position = get_entity_position_in_layer(entity, $current_layer)
+    $: position = entity.get_position_in_layer($current_layer)
     let visible: boolean
-    $: visible = position !== null && is_point_in_zoom_range(position, $zoom)
+    $: visible = position !== null && position.is_in_zoom_range($zoom)
 </script>
 
 <style>
