@@ -15,7 +15,7 @@
     <Marker
         icon={$selection.icon}
         shape="pin"
-        scale="1.25"
+        scale={1.25}
     />
 </g>
 {/if}
