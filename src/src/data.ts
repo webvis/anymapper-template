@@ -4,7 +4,7 @@
 // the collection is exposed as a JS Map (to support id-based lookup)
 // the collection is also indexed with fuse.js in order to support full-text searching
 
-import { Entity, Point } from 'anymapper'
+import { Entity } from 'anymapper'
 import Fuse from 'fuse.js'
 
 // read the list of pois from JSON, and return them as a Map of Entities
