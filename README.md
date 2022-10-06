@@ -5,9 +5,24 @@ A template for [anymapper](https://github.com/webvis/anymapper) applications. Pl
 
 This template is based on `npm init vite` (`svelte` with `typescript` option).
 
+### Test the application
+```
+cd src
+yarn
+yarn dev
+```
+
+### Build and run the application
+```
+cd src
+yarn
+yarn build
+yarn preview
+```
 
 ## Light/dark themes
 Customize the SCSS files found in `src/theme/light` and `src/theme/dark`, then run:
 ```
+cd src
 yarn prepare
 ```
