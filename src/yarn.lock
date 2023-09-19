@@ -2262,14 +2262,15 @@ ansi-styles@^4.0.0, ansi-styles@^4.1.0:
   dependencies:
     color-convert "^2.0.1"
 
-anymapper@^0.35.7:
-  version "0.35.7"
-  resolved "https://registry.yarnpkg.com/anymapper/-/anymapper-0.35.7.tgz#f472505fcada12e5c266571a5f9f5547ae3c57da"
-  integrity sha512-w8+brE3eRJ79foD4yC1FNCt/x14efJzwrGftAM5oZ9ulj5S2gWGPv5U1hBmsHllojm9VCK54O+q2JzWFXkQQzQ==
+anymapper@^0.38.2:
+  version "0.38.2"
+  resolved "https://registry.yarnpkg.com/anymapper/-/anymapper-0.38.2.tgz#1ba3f06da90b80acd78cd48c51f325069f9ab4b7"
+  integrity sha512-ov+qrQkIYlebgCkES48yDqwHBGzvJFP8yb/da4JXq+KttyIyj2wnyTQTCjFEV6b5Pv7Cr4s5wQjt5pAizRvHVQ==
   dependencies:
     "@observablehq/runtime" "^4.8.2"
     d3 "^7.6.1"
     d3-array "^2.4.0"
+    path-data-polyfill "^1.0.4"
 
 anymatch@~3.1.2:
   version "3.1.2"
@@ -3641,6 +3642,11 @@ pascal-case@^3.1.1:
   dependencies:
     no-case "^3.0.4"
     tslib "^2.0.3"
+
+path-data-polyfill@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/path-data-polyfill/-/path-data-polyfill-1.0.4.tgz#dee369752c8d3fdfc41fc16fda1e6fb4a4a964fe"
+  integrity sha512-rrtYO5xbHz0GOrLIc0uRVhwcOlWNn9JtTwaFFdwYrcrOJXZlmfMWqXf3xjo2jlJIwEbOH+4+Aqf+1diNvXSAnQ==
 
 path-is-absolute@^1.0.0:
   version "1.0.1"

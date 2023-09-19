@@ -6,7 +6,7 @@
     import { zoom, current_layer } from 'anymapper'
     import { select } from 'anymapper'
     import { Marker } from 'anymapper'
-    import { Entity, Point } from 'anymapper'
+    import type { Entity, Point } from 'anymapper'
 
     export let entity: Entity
 

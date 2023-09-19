@@ -7,7 +7,7 @@
 	import { onMount } from 'svelte'
 	
 	import type { Entity } from 'anymapper'
-	import { Anymap, View, Layer, FloorLayersCtrl, InlineSVG, InfoBox, InfoBoxHeader, OmniBox, ResultsBox } from 'anymapper'
+	import { Anymap, View, Layer, FloorLayersCtrl, InlineSVG, InfoBox, Header, OmniBox, ResultsBox } from 'anymapper'
 	import { selected_id, selection } from 'anymapper'
 
 	// this template makes use of Svelte Material UI (same one that's used by anymapper)
@@ -102,7 +102,7 @@
 	<!-- this shows an info box if there's a selection -->
 	<InfoBox>
 		<!-- the contents of InfoBox can be freely customized -->
-		<InfoBoxHeader title={$selection.title} subtitle={$selection.subtitle}/>
+		<Header title={$selection.title} subtitle={$selection.subtitle}/>
 		<Content>
 			{@html $selection.content}
 		</Content>
